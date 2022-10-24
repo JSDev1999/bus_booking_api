@@ -162,12 +162,10 @@ export const getSeatInfo = async (req, res, next) => {
 export const OpenAllTickets = async (req, res, next) => {
   try {
     await userModel.destroy({
-      //  where: {},
       truncate: true,
     });
     await seatModel
       .destroy({
-        //   where: {},
         truncate: true,
       })
       .then((respo) => {
